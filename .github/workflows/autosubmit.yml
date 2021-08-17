@@ -29,9 +29,9 @@ jobs:
         with:
            python-version: 3.7
       - name: 'Install requirements'
-        run: pip install -r ./Spider/requirements.txt
+        run: pip install -r ./autosubmit/spider/requirements.txt
       - name: 'Working'
         run: |
-          sudo cp -p ./chrome/chromedriver /usr/bin/
+          sudo cp -p ./autosubmit/chrome/chromedriver /usr/bin/
           chmod -R 777 /usr/bin/chromedriver
-          python ./Spider/test.py
+          python ./autosubmit/spider/test.py
